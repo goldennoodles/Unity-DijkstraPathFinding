@@ -74,7 +74,7 @@ namespace _Scripts.PathFinding
                 // Sort our list to have the lightest nodes first;
                 unexplored.Sort((x, z) => x.GetWeight().CompareTo(z.GetWeight()));
 
-                // Find the node with the least amount of weight;
+                // Pull out the lightest node from the unexplored list.
                 Node node = unexplored[0];
                 
                 // No need to loop through all nodes if the endNode has been reached.
@@ -106,8 +106,8 @@ namespace _Scripts.PathFinding
                         // Checks the if the currentNeighbours Distance is less than the currentNodes weight
                         if (distance < neighbourNode.GetWeight())
                         {
-                            // If the distance is less, re-assign the currentNeighbours Distance,
-                            // And assign the parentNode to be that of the currentNode;
+                            // If distance is less, re-assign the currentNeighbours weight to be the calculated distance,
+                            // And assign the neighbours parentNode to be the currentNode;
                             neighbourNode.SetWeight(distance);
                             neighbourNode.SetParent(node);
                         }
