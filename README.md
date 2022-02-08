@@ -8,4 +8,7 @@ Pathfinding with road nodes using Dijkstra's Algorithm.
 ### Bugs
 - There is currently a bug where if the offset between the tiles is too great, the neighbours of the nodes cannot be found.
 
+## Thanks to:
+https://www.youtube.com/watch?v=pVfj6mxhdMw
+
 Written in C#, By Rus Kuzmin
